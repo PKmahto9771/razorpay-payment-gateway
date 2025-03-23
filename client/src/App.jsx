@@ -5,6 +5,7 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [amount, setAmount] = useState()
   const currency = 'INR'
+  const backend_URL = 'https://razorpay-payment-gateway-uac2.onrender.com'
 
   async function paymentHandler(e){
     setLoading(true);
@@ -18,7 +19,7 @@ function App() {
         alert('Transaction Limit is INR 500000 only')
         return;
       }
-      const response = await fetch('http://localhost:5000/order', {
+      const response = await fetch(`${backend_URL}/order`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

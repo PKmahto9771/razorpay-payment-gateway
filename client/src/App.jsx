@@ -7,8 +7,7 @@ function App() {
   const [notification, setNotification] = useState({ message: '', type: '' })
   const [errors, setErrors] = useState({})
   const currency = 'INR'
-  const backend_URL = 'http://localhost:5000' // Change this for local testing
-  // const backend_URL = 'https://razorpay-payment-gateway-uac2.onrender.com' // Deployed server
+  const backend_URL = 'https://razorpay-payment-gateway-uac2.onrender.com'
 
   // Quick payment presets
   const paymentPresets = [100, 500, 1000, 5000, 10000]
